@@ -18,6 +18,7 @@ on load:
 on first join:
 	add ip of player to {ip::*}
 	set {alreadyadded::%player's uuid%} to true
+# Commands agrumments completions
 on tab complete of "/checkip":
 	set tab completions for position 1 to all players
 on tab complete of "/stafflist":
