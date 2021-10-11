@@ -11,42 +11,7 @@
 options:
 	prefix: &a[&eClutchMCC&a]:
 # Events
-on load:
-	loop all players:
-		if loop-player has permission "op" or "developers":
-			send "&e[%script name%&e]: &3Loaded (Alpha)"
-on first join:
-	add ip of player to {ip::*}
-	set {alreadyadded::%player's uuid%} to true
+
 # Commands agrumments completions
-on tab complete of "/checkip":
-	set tab completions for position 1 to all players
-on tab complete of "/stafflist":
-	set tab completions for position 1 to "amount" and "players"
+
 # Commands
-command /checkip <offline player>:
-	permission: checkip.use
-	trigger:
-		if {ip::*} does not contain arg-1's ip:
-			if {alreadyadded::%player's uuid%} is true:
-				send "{@prefix}: &cHis ip does not added in, but the server saying hes already added. Maybe VPN"
-			else if {alreadyadded::%player's uuid%} is false:
-				send "{@prefix}: &aHis ip does not added in, hes didnt got added. Maybe hes never joined the server."
-command /stafflist <text>:
-	permission: disabled.stafflist
-	permission message: &cThis command is disabled due to hackers using it, to know when to hack on.
-	trigger:
-		if arg-1 is amount:
-			loop all players:
-				if loop-player has permission "op":
-					add loop-player to {_staff::*}
-			send "{@prefix}: There is %amount of {_staff::*} ? 0%" to player
-		else if arg-1 is players:
-			loop all players:
-				if loop-player has permission "op":
-					send "- %loop-player%"
-command /playerslist:
-	trigger:
-		send "{@prefix}: &aPlayer list"
-		loop all players:
-			send "&e- %player%" to player
