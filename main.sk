@@ -10,8 +10,10 @@
 # Options
 options:
 	prefix: &a[&eClutchMCC&a]:
+	discordlink: https://discord.gg/3yaHN8rhqj
 # Events
-
+on load:
+	send "&9{@discordlink}&6, Join the discord now for funni stuff" to all players
 # Commands agrumments completions
 
 # Commands
