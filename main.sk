@@ -15,5 +15,11 @@ options:
 on load:
 	send "&9{@discordlink}&6, Join the discord now for funni stuff" to all players
 # Commands agrumments completions
-
+on tab complete:
+	if event-string is "ban":
+		set tab completions for position 1 to all players
 # Commands
+command /ban <offline player> <text>:
+	permission: op
+	trigger:
+		ban arg-1 due to arg-2
