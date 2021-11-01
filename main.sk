@@ -6,9 +6,12 @@
 options:
 	prefix: &a[&eClutchMCC&a]:
 	discordlink: https://discord.gg/3yaHN8rhqj
+	developersPerm: developers
 # Events
 on load:
-	send "&9{@discordlink}&6, Join the discord now for funni stuff" to all players
+	loop all players:
+		if loop-player has permission {@developersPerm}:
+			send "&9{@discordlink}&6, Join the discord now for funni stuff" to loop-player
 # Commands agrumments completions
 on tab complete:
 	if event-string is "ban" or "kick":
