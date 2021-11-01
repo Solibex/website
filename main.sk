@@ -1,0 +1,4 @@
+on join:
+	while player is online:
+		set loop-player's tablist name to "%loop-player's prefix%%loop-player%"
+		wait 1 tick
