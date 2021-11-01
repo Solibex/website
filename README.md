@@ -5,3 +5,5 @@
 ## The current version is 0.1
 
 ### Thanks you for visit
+### Contact Solibez
+### https://discord.gg/3yaHN8rhqj
