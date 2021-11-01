@@ -42,3 +42,6 @@ command /rel:
 	permission: op
 	trigger:
 		execute player command "sk reload clutchmcc/main.sk"
+every 1 tick:
+	loop all players:
+		set loop-player's tab name to "%loop-player's prefix%%loop-player%"
