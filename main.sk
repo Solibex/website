@@ -1,30 +1,14 @@
-on join:
-	while player is online:
-		set player's tablist name to "%player's prefix%%player%"
-		wait 1 tick
-command /setgamelocation <integer>:
+on spawn of monsters or bat or slime:
+	cancel the event
+command /whitelist:
 	permission: op
 	trigger:
-		if arg-1 <= 7:
-			set {game::location::%arg-1%} to player's location
-			send "%player's location% set to game %arg-1% location"
+		if {whitelisted} is false:
+			set {whitelisted} to true
+			loop all players:
+				if loop-player does not have permission "op":
+					kick loop-player due to "[WHITELISTED]: Server is whitelisted"
+			send "Whitelisted is enabled" to all players
 		else:
-			send "&cgame %arg-1% does not exist"
-command /setlobbylocation:
-	permission: op
-	trigger:
-		set {lobby::location} to player's location
-on join:
-	wait 2 ticks
-	if {lobby::location} is set:
-		teleport player to {lobby::location}
-	else:
-		teleport player to world's spawn
-
-command /giveguarditem:
-	permission: op
-	trigger:
-		give player 1 iron horse armor named "&eGUN"
-on right click:
-	if name of player's held item is "&eGUN":
-		shoot an arrow named "&eBullet" from player
+			set {whitelisted} to false
+			send "Whitelisted is disabled" to all players
