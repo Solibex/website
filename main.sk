@@ -32,3 +32,13 @@ command /kick <player> [<text>]:
 			kick arg-1 due to "{@prefix}: %arg-2%"
 		else:
 			kick arg-1 due to "{@prefix}: You're were kicked for no reason."
+command /ice:
+	permission: ice.use
+	trigger:
+		spawn falling ice at player's location
+		set {_ice} to last spawned entity
+		push {_ice} in direction of player
+command /rel:
+	permission: op
+	trigger:
+		execute player command "sk reload clutchmcc/main.sk"
