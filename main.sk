@@ -16,10 +16,22 @@ on load:
 	send "&9{@discordlink}&6, Join the discord now for funni stuff" to all players
 # Commands agrumments completions
 on tab complete:
-	if event-string is "ban":
+	if event-string is "ban" or "kick":
 		set tab completions for position 1 to all players
 # Commands
-command /ban <offline player> <text>:
+command /ban <offline player> [<text>]:
 	permission: op
 	trigger:
-		ban arg-1 due to arg-2
+		if arg-2 is set:
+			ban arg-1 due to arg-2
+			if arg-1 is online:
+				kick arg-1 due to arg-2
+		else:
+			ban arg-1 due to "You're were banned for no reason."
+command /kick <player> [<text>]:
+	permission: op
+	trigger:
+		if arg-2 is set:
+			kick arg-1 due to arg-2
+		else:
+			kick arg-1 due to "You're were banned for no reason."
