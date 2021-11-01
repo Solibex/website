@@ -31,4 +31,4 @@ command /kick <player> [<text>]:
 		if arg-2 is set:
 			kick arg-1 due to "{@prefix}: %arg-2%"
 		else:
-			kick arg-1 due to "{@prefix}: You're were banned for no reason."
+			kick arg-1 due to "{@prefix}: You're were kicked for no reason."
