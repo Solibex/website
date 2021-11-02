@@ -1,14 +1,3 @@
-on spawn of monsters or bat or slime:
-	cancel the event
-command /whitelist:
-	permission: op
-	trigger:
-		if {whitelisted} is false:
-			set {whitelisted} to true
-			loop all players:
-				if loop-player does not have permission "op":
-					kick loop-player due to "[WHITELISTED]: Server is whitelisted"
-			send "Whitelisted is enabled" to all players
-		else:
-			set {whitelisted} to false
-			send "Whitelisted is disabled" to all players
+# laughing
+
+# no source code for chu	
