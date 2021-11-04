@@ -4,3 +4,5 @@ command /credit:
 		send "&b- Solibez"
 		send "&cProject Owner:"
 		send "&b- TheGreatestAvatar"
+		send "&6Builders:"
+		send "&b- NONE"
