@@ -1,3 +1,6 @@
+variables:
+	{funfact::*} = "&eDo /credit to check out the staff :D"
+
 command /credit:
 	trigger:
 		send "&9Developers:"
@@ -16,3 +19,5 @@ command /credit:
 		send "&b- freenie, brooks, codeh (??)"
 		send "&eSpecial Guests:"
 		send "&b- %player% &b(playin)"
+every 10 minutes:
+	send "&efun fact: %random text out of {funfact::*}%" to all players
