@@ -1,5 +1,5 @@
 variables:
-	{funfact::*} = "&eDo /credit to check out the staff :D"
+	{funfact::*} = "&eDo /credit to check out the all staff? :D" and "&9clutchmcc was all solo-code by the owner :laughing:"
 
 command /credit:
 	trigger:
