@@ -18,5 +18,7 @@ command /credit:
 		send "&b- freenie, brooks, codeh (??)"
 		send "&eSpecial Guests:"
 		send "&b- %player% &b(playin)"
-every 10 minutes:
-	send "&efun fact: %random text out of {funfact::*}%" to all players
+on join:
+	while player is online:
+		send "&efun fact: %random text out of {funfact::*}%" to all players
+		wait 10 minutes
