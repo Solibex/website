@@ -1,3 +1,6 @@
-# laughing
-
-# no source code for chu	
+command /credit:
+	trigger:
+		send "&9Developers:"
+		send "&b- Solibez"
+		send "&cProject Owner:"
+		send "&b- TheGreatestAvatar"
