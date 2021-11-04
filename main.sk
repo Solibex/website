@@ -1,5 +1,5 @@
 variables:
-	{funfact::*} = "&eDo /credit to check out the all staff? :D" and "&9clutchmcc was all solo-code by the owner :laughing:" and "&eclutchmcc release date is XX-X-XXXX"
+	{funfact::*} = "&eDo /credit to check out the all staff? :D" and "&9clutchmcc was all solo-code by the owner :laughing:" and "&eclutchmcc release date is XX-X-XXXX" and "&ecould i get money for server plan :( buy some our rank ples"
 command /credit:
 	trigger:
 		send "&9Developers:"
